@@ -1,0 +1,36 @@
+.flash-card {
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    perspective: 1000px;
+}
+
+.flash-card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.flash-card-front, .flash-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flash-card-back {
+    transform: rotateY(180deg);
+}
+
+.flash-card.flip .flash-card-inner {
+    transform: rotateY(180deg);
+}
