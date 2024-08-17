@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "whitenoise.runserver_nostatic",
     'flashcards_app',
-    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
